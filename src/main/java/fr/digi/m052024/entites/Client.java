@@ -1,9 +1,8 @@
 package fr.digi.m052024.entites;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.time.LocalDate;
 
 @Entity
 public class Client {
@@ -13,6 +12,9 @@ public class Client {
 
     private String nom;
     private String prenom;
+    @Embedded
+    private Adresse adresse;
+    private LocalDate Datenaissance;
 
     // Getters et Setters
 
@@ -39,4 +41,6 @@ public class Client {
     public void setPrenom(String prenom) {
         this.prenom = prenom;
     }
+    public String getAddresses()
+    { return this.adresse.toString();}
 }
