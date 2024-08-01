@@ -1,2 +1,36 @@
-package fr.digi.m052024.entites;public class Adresse {
+package fr.digi.m052024.entites;
+
+import jakarta.persistence.Embeddable;
+
+@Embeddable
+public class Adresse {
+    private String rue;
+    private String ville;
+    private String codePostal;
+
+    // Getters et Setters
+
+    public String getRue() {
+        return rue;
+    }
+
+    public void setRue(String rue) {
+        this.rue = rue;
+    }
+
+    public String getVille() {
+        return ville;
+    }
+
+    public void setVille(String ville) {
+        this.ville = ville;
+    }
+
+    public String getCodePostal() {
+        return codePostal;
+    }
+
+    public void setCodePostal(String codePostal) {
+        this.codePostal = codePostal;
+    }
 }
